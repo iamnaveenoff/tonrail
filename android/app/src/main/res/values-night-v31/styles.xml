@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark-first: the launch window matches the Flutter splash in every system mode. -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <!-- Android 12+ system splash: plain ground; the Flutter splash draws the mark. -->
+        <item name="android:windowSplashScreenBackground">@color/splash_background</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_blank</item>
+    </style>
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@color/splash_background</item>
+    </style>
+</resources>

@@ -1,0 +1,43 @@
+name: Device report
+description: Tell us whether the app works with your headphones.
+labels: [device-report]
+body:
+  - type: dropdown
+    id: works
+    attributes:
+      label: Does it connect and work?
+      options:
+        - Yes, everything works
+        - Connects, but some features don't work
+        - Doesn't connect
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Headphones
+      description: Model as shown in Android Bluetooth settings, and colour.
+      placeholder: model name, colour
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware version
+      description: From the headphones' official app, if you know it.
+  - type: input
+    id: phone
+    attributes:
+      label: Phone model and Android version
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What didn't work?
+  - type: textarea
+    id: log
+    attributes:
+      label: Diagnostics log
+      description: Device → Diagnostics → copy icon, then paste here.
+      render: text

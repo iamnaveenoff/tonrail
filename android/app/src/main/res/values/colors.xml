@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#1C1C1B</color>
+    <!-- Matches the Flutter splash so launch never flashes. -->
+    <color name="splash_background">#1E1F1F</color>
+</resources>
