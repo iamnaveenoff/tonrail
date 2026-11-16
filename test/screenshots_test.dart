@@ -119,7 +119,9 @@ Future<void> _shot(WidgetTester tester, String name) async {
 }
 
 void main() {
-  setUpAll(_loadFonts);
+  setUpAll(() async {
+    if (_enabled) await _loadFonts();
+  });
 
   testWidgets('screenshots', skip: !_enabled, (tester) async {
     await _pump(tester, SplashScreen(onDone: () {}), await _demo());
